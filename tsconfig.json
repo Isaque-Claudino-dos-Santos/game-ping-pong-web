@@ -10,7 +10,8 @@
         "paths": {
             "@Src/*": ["./src/*"],
             "@Interfaces/*": ["./src/Interfaces/*"],
-            "@Game/*": ["./src/Game/*"]
+            "@Game/*": ["./src/Game/*"],
+            "@Types/*": ["./src/Types/*"]
         }
     },
     "files": ["src/index.ts"],

@@ -58,6 +58,7 @@ const config = {
             '@Src/*': ['./src/*'],
             '@Interfaces/*': ['./src/Interfaces/*'],
             '@Game/*': ['./src/Game/*'],
+            '@Types/*': ['./src/Types/*'],
         },
     },
 }
