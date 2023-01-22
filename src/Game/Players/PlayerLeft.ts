@@ -1,4 +1,3 @@
-import EnvGame from '../EnvGame'
 import Player from './Player'
 
 export default class PlayerLeft extends Player {

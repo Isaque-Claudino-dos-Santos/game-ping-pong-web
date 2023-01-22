@@ -12,8 +12,8 @@ export default abstract class Player implements InterfacePlayer {
 
     control: TypesPlayer.Control = {
         keys: {
-            up: 'w',
-            down: 's',
+            up: '',
+            down: '',
         },
         states: {
             up: false,
@@ -21,7 +21,7 @@ export default abstract class Player implements InterfacePlayer {
         },
     }
 
-    speed = 1
+    speed = 5
 
     constructor() {
         this.width = EnvGame.PLAYER_WIDTH
@@ -42,5 +42,5 @@ export default abstract class Player implements InterfacePlayer {
         context.fillRect(this.x, this.y, this.width, this.height)
     }
 
-    update: () => void
+    abstract update: () => void
 }
