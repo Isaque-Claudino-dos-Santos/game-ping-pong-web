@@ -6,7 +6,7 @@ export default class PlayerLeft extends Player {
     y: number
     width: number
     height: number
-    color: string = 'black'
+    color: string
 
     constructor(canvas: HTMLCanvasElement) {
         super()
