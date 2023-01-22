@@ -12,7 +12,13 @@ export default class PlayerRight extends Player {
         super()
         this.x = canvas.width - this.width * 2
         this.y = canvas.height / 2 - this.height / 2
+        this.control.keys = {
+            up: 'ArrowUp',
+            down: 'ArrowDown',
+        }
     }
 
-    update = () => {}
+    update = () => {
+        this.playerMoviment()
+    }
 }

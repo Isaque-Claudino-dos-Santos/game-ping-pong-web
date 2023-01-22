@@ -1,5 +1,12 @@
+import KeyBoard from './KeyBoard'
 import Display from './Display'
 import Players from './Game/Players'
+
+new KeyBoard()
+KeyBoard.config('w')
+KeyBoard.config('s')
+KeyBoard.config('ArrowUp')
+KeyBoard.config('ArrowDown')
 
 const display = new Display()
 
@@ -9,11 +16,15 @@ const playerRight = new Players.PlayerRight(display.canvas)
 display.canvas.style.border = '1px solid black'
 
 const onRender = () => {
+    display.clearAllCanvas()
     playerLeft.render(display.context)
     playerRight.render(display.context)
 }
 
-const onUpdate = () => {}
+const onUpdate = () => {
+    playerLeft.update()
+    playerRight.update()
+}
 
 const loop = () => {
     onUpdate()

@@ -7,6 +7,10 @@ namespace TypesPlayer {
         up: boolean
         down: boolean
     }
+    export type Control = {
+        keys: ControlKeys
+        states: ControlKeysState
+    }
 }
 
 export default TypesPlayer

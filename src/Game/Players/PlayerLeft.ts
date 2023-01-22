@@ -12,7 +12,13 @@ export default class PlayerLeft extends Player {
         super()
         this.x = this.width
         this.y = canvas.height / 2 - this.height / 2
+        this.control.keys = {
+            up: 'w',
+            down: 's',
+        }
     }
 
-    update = () => {}
+    update = () => {
+        this.playerMoviment()
+    }
 }
