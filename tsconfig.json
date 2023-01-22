@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "allowJs": true,
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "paths": {
+            "@Src/*": ["./src/*"],
+            "@Interfaces/*": ["./src/Interfaces/*"],
+            "@Game/*": ["./src/Game/*"]
+        }
+    },
+    "files": ["src/index.ts"],
+    "include": ["src/**/*.ts", "src/**/**/*.ts", "src/*.ts"]
+}
