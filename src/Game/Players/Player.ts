@@ -2,6 +2,7 @@ import InterfacePlayer from '@Src/Interfaces/InterfacePlayer'
 import KeyBoard from '../../KeyBoard'
 import TypesPlayer from '@Src/Types/TypesPlayer'
 import EnvGame from '../EnvGame'
+import Ball from '../Ball'
 
 export default abstract class Player implements InterfacePlayer {
     x: number
@@ -23,7 +24,10 @@ export default abstract class Player implements InterfacePlayer {
 
     speed = 5
 
-    constructor() {
+    constructor(
+        private readonly canvas: HTMLCanvasElement,
+        private readonly ball: Ball
+    ) {
         this.width = EnvGame.PLAYER_WIDTH
         this.height = EnvGame.PLAYER_HEIGHT
         this.color = EnvGame.PLAYER_COLOR
@@ -35,6 +39,10 @@ export default abstract class Player implements InterfacePlayer {
 
         if (this.control.states.up) this.y -= this.speed
         if (this.control.states.down) this.y += this.speed
+    }
+
+    protected kickBall() {
+        //TODO: Implement
     }
 
     render = (context: CanvasRenderingContext2D) => {

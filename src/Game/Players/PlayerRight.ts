@@ -1,3 +1,4 @@
+import Ball from '../Ball'
 import EnvGame from '../EnvGame'
 import Player from './Player'
 
@@ -8,8 +9,8 @@ export default class PlayerRight extends Player {
     height: number
     color: string
 
-    constructor(canvas: HTMLCanvasElement) {
-        super()
+    constructor(canvas: HTMLCanvasElement, ball: Ball) {
+        super(canvas, ball)
         this.x = canvas.width - this.width * 2
         this.y = canvas.height / 2 - this.height / 2
         this.control.keys = {
@@ -20,5 +21,6 @@ export default class PlayerRight extends Player {
 
     update = () => {
         this.playerMoviment()
+        this.kickBall()
     }
 }
