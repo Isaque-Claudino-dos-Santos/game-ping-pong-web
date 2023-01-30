@@ -3,8 +3,12 @@ import KeyBoard from '../../KeyBoard'
 import TypesPlayer from '@Src/Types/TypesPlayer'
 import EnvGame from '../EnvGame'
 import Ball from '../Ball'
+import RectMeasure from '../RectMeasure'
 
-export default abstract class Player implements InterfacePlayer {
+export default abstract class Player
+    extends RectMeasure
+    implements InterfacePlayer
+{
     x: number
     y: number
     width: number
@@ -22,9 +26,10 @@ export default abstract class Player implements InterfacePlayer {
         },
     }
 
-    speed = 5
+    speed = 10
 
     constructor(private readonly canvas: HTMLCanvasElement) {
+        super()
         this.width = EnvGame.PLAYER_WIDTH
         this.height = EnvGame.PLAYER_HEIGHT
         this.color = EnvGame.PLAYER_COLOR

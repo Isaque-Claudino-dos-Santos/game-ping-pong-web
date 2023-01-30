@@ -19,15 +19,17 @@ display.canvas.style.border = '1px solid black'
 
 const onRender = () => {
     display.clearAllCanvas()
-    ball.render(display.context)
     playerLeft.render(display.context)
     playerRight.render(display.context)
+    ball.render(display.context)
 }
 
 const onUpdate = () => {
     playerLeft.update()
     playerRight.update()
     ball.update()
+    ball.bounce(playerRight)
+    ball.bounce(playerLeft)
 }
 
 const loop = () => {
