@@ -43,6 +43,11 @@ export default abstract class Player
         if (this.control.states.down) this.y += this.speed
     }
 
+    canvasLimits() {
+        if (this.y + this.height > this.canvas.height) this.y -= this.speed
+        if (this.y < 0) this.y += this.speed
+    }
+
     render = (context: CanvasRenderingContext2D) => {
         context.fillStyle = this.color
         context.fillRect(this.x, this.y, this.width, this.height)

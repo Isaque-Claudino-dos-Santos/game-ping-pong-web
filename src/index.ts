@@ -17,19 +17,21 @@ const ball = new Ball(display.canvas)
 
 display.canvas.style.border = '1px solid black'
 
+const onUpdate = () => {
+    playerLeft.update()
+    playerLeft.canvasLimits()
+    playerRight.update()
+    playerRight.canvasLimits()
+    ball.update()
+    ball.bounce(playerRight)
+    ball.bounce(playerLeft)
+}
+
 const onRender = () => {
     display.clearAllCanvas()
     playerLeft.render(display.context)
     playerRight.render(display.context)
     ball.render(display.context)
-}
-
-const onUpdate = () => {
-    playerLeft.update()
-    playerRight.update()
-    ball.update()
-    ball.bounce(playerRight)
-    ball.bounce(playerLeft)
 }
 
 const loop = () => {
