@@ -41,10 +41,6 @@ export default abstract class Player implements InterfacePlayer {
         if (this.control.states.down) this.y += this.speed
     }
 
-    protected kickBall() {
-        //TODO: Implement
-    }
-
     render = (context: CanvasRenderingContext2D) => {
         context.fillStyle = this.color
         context.fillRect(this.x, this.y, this.width, this.height)
