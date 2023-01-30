@@ -24,10 +24,7 @@ export default abstract class Player implements InterfacePlayer {
 
     speed = 5
 
-    constructor(
-        private readonly canvas: HTMLCanvasElement,
-        private readonly ball: Ball
-    ) {
+    constructor(private readonly canvas: HTMLCanvasElement) {
         this.width = EnvGame.PLAYER_WIDTH
         this.height = EnvGame.PLAYER_HEIGHT
         this.color = EnvGame.PLAYER_COLOR

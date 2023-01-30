@@ -1,4 +1,5 @@
 import InterfaceEntity from '@Src/Interfaces/InterfaceEntity'
+import InterfacePlayer from '@Src/Interfaces/InterfacePlayer'
 
 type TypeSenses = { x: 1 | -1; y: 1 | -1 }
 
@@ -21,7 +22,7 @@ export default class Ball implements InterfaceEntity {
         this.y = canvas.height / 2
     }
 
-    bounce() {
+    bounce(colliderIn: InterfacePlayer) {
         //TODO: Implement
     }
 

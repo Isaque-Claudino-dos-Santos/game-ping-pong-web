@@ -11,17 +11,17 @@ KeyBoard.config('ArrowDown')
 
 const display = new Display()
 
+const playerLeft = new Players.PlayerLeft(display.canvas)
+const playerRight = new Players.PlayerRight(display.canvas)
 const ball = new Ball(display.canvas)
-const playerLeft = new Players.PlayerLeft(display.canvas, ball)
-const playerRight = new Players.PlayerRight(display.canvas, ball)
 
 display.canvas.style.border = '1px solid black'
 
 const onRender = () => {
     display.clearAllCanvas()
+    ball.render(display.context)
     playerLeft.render(display.context)
     playerRight.render(display.context)
-    ball.render(display.context)
 }
 
 const onUpdate = () => {

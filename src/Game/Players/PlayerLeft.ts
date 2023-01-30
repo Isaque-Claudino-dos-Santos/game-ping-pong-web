@@ -8,8 +8,8 @@ export default class PlayerLeft extends Player {
     height: number
     color: string
 
-    constructor(canvas: HTMLCanvasElement, ball: Ball) {
-        super(canvas, ball)
+    constructor(canvas: HTMLCanvasElement) {
+        super(canvas)
         this.x = this.width
         this.y = canvas.height / 2 - this.height / 2
         this.control.keys = {
@@ -19,7 +19,6 @@ export default class PlayerLeft extends Player {
     }
 
     update = () => {
-        this.kickBall()
         this.playerMoviment()
     }
 }
