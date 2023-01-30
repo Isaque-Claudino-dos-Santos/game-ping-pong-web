@@ -25,7 +25,6 @@ export default class Ball extends RectMeasure implements InterfaceEntity {
     }
 
     bounce(colliderIn: InterfacePlayer) {
-        //TODO: Implement
         const catX = this.centerX() - colliderIn.centerX()
         const catY = this.centerY() - colliderIn.centerY()
         const sumHalfWidth = this.halfWidth() + colliderIn.halfWidth()
@@ -33,7 +32,8 @@ export default class Ball extends RectMeasure implements InterfaceEntity {
         const overlapX = sumHalfWidth - Math.abs(catX)
         const overlapY = sumHalfHeight - Math.abs(catY)
 
-        if (Math.abs(catX)) {
+        if (overlapX > 0 && overlapY > 0) {
+            this.senses.x = this.senses.x === -1 ? 1 : -1
         }
     }
 
