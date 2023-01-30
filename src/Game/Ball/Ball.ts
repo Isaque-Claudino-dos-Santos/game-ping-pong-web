@@ -21,6 +21,10 @@ export default class Ball implements InterfaceEntity {
         this.y = canvas.height / 2
     }
 
+    bounce() {
+        //TODO: Implement
+    }
+
     update = () => {
         this.x += this.speed * this.senses.x
     }
